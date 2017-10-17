@@ -2,11 +2,16 @@
 
 require('service.php');
 
-$myForm = new Form;
+$myForm = new Form('POST');
 
-echo '<pre>';
-var_dump($myForm);
-echo '<pre>';
-// $myForm
+$myForm->setText('pseudo');
+$myForm->setText('nom');
+$myForm->setText('prenom');
+$myForm->setSubmit('envoyerForm', 'Envoyer');
+
+// echo '<pre>';
+// var_dump($myForm);
+// echo '<pre>';
+echo $myForm->getForm();
 
 ?>
